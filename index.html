@@ -6,21 +6,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <title>Online Grocery</title>
-    <script
+    <!-- <script
       src="https://kit.fontawesome.com/f76a61a278.js"
       crossorigin="anonymous"
-    ></script>
+    ></script> -->
+    <!-- <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script> -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <section id="header">
-      <a href="#"><img src="./images/logo.png" class="logo" /></a>
-      <div id="navbar">
-        <li>
-          <a href="login.html"
-            ><i class="fa-solid fa-right-to-bracket" aria-hidden="true"></i
-          ></a>
-        </li>
+    <header class="header">
+      <nav class="navbar">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+      </nav>
+    </header>
+    <div class="background"></div>
+    <div class="container">
+      <div class="content">
+        <h2 class="logo">
+          <box-icon type="logo" name="firebase"></box-icon>Maxwel Kipruto
+        </h2>
+        <div class="text-sci">
+          <h2>Welcome<br /><span>To Our New Website!</span></h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut
+          </p>
+          <div class="social-icons">
+            <a href="#"><i class="bx bxl-facebook"></i></a>
+            <a href="#"><i class="bx bxl-instagram"></i></a>
+            <a href="#"><i class="bx bxl-twitter"></i></a>
+          </div>
+        </div>
       </div>
-    </section>
+      <div class="logreg-box">
+        <div class="form-box login">
+          <form action="">
+            <h2>Sign In</h2>
+            <div class="input-box">
+              <span class="icon"><i class="bx bxs-envelope"></i></span>
+              <input type="email" required />
+              <label for="">Email</label>
+            </div>
+            <div class="input-box">
+              <span class="icon"><i class="bx bxs-lock-alt"></i></span>
+              <input type="password" required />
+              <label for="">Password</label>
+            </div>
+            <!-- <div class="remember-forgot">
+              <label><input type="checkbox" />Remember Me</label>
+              <a href="#">Forgot Password?</a>
+            </div> -->
+            <button type="submit" class="btn">Sign In</button>
+            <div class="login-register">
+              <p>
+                Don't have an account?
+                <a href="#" class="register-link">Sign Up</a>
+              </p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
