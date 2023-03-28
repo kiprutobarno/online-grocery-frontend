@@ -9,7 +9,8 @@ loginLink.addEventListener("click", () => {
   logregBox.classList.remove("active");
 });
 
-const userSignUp = async () => {
+const customerSignUp = async (e) => {
+  e.preventDefault();
   var url = "http://localhost:8000/customers/signup";
   var addressurl = "http://localhost:8000/customers/address";
   var email = document.getElementById("email").value;
@@ -57,4 +58,35 @@ const userSignUp = async () => {
   }
 };
 
-document.getElementById("signUp").addEventListener("click", userSignUp);
+const customerSignIn = async (e) => {
+  e.preventDefault();
+  var url = "http://localhost:8000/customers/login";
+  var email = document.getElementById("login-email").value;
+  var password = document.getElementById("login-password").value;
+  try {
+    const signInResponse = await fetch(url, {
+      method: "POST",
+      headers: {
+        mode: "no-cors",
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ email, password }),
+    });
+
+    const {
+      success,
+      data: { token },
+    } = await signInResponse.json();
+
+    if (success) {
+      /**store JWT token in  lcoal storage */
+      localStorage.setItem("token", token);
+      window.location.href = "index.html";
+    }
+  } catch (error) {
+    return error;
+  }
+};
+document.getElementById("signUp").addEventListener("click", customerSignUp);
+document.getElementById("signIn").addEventListener("click", customerSignIn);
