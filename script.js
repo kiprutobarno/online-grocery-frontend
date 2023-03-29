@@ -1,13 +1,13 @@
-const logregBox = document.querySelector(".logreg-box");
-const loginLink = document.querySelector(".login-link");
-const registerLink = document.querySelector(".register-link");
+// const logregBox = document.querySelector(".logreg-box");
+// const loginLink = document.querySelector(".login-link");
+// const registerLink = document.querySelector(".register-link");
 
-registerLink.addEventListener("click", () => {
-  logregBox.classList.add("active");
-});
-loginLink.addEventListener("click", () => {
-  logregBox.classList.remove("active");
-});
+// registerLink.addEventListener("click", () => {
+//   logregBox.classList.add("active");
+// });
+// loginLink.addEventListener("click", () => {
+//   logregBox.classList.remove("active");
+// });
 
 const customerSignUp = async (e) => {
   e.preventDefault();
@@ -90,3 +90,40 @@ const customerSignIn = async (e) => {
 };
 document.getElementById("signUp").addEventListener("click", customerSignUp);
 document.getElementById("signIn").addEventListener("click", customerSignIn);
+
+//Toggle Form
+const loginForm = document.getElementById("login-form");
+const registerForm = document.getElementById("sign-up-form");
+const indicator = document.getElementById("indicator");
+
+const registerLink = document.querySelector(".register-link");
+const loginLink = document.querySelector(".login-link");
+
+// console.log("OK");
+
+// function login() {
+//   registerForm.style.transform = "translateX(20rem)";
+//   loginForm.style.transform = "translateX(20rem)";
+// }
+
+// function regsiter() {
+//   registerForm.style.transform = "translateX(0rem)";
+//   loginForm.style.transform = "translateX(0rem)";
+// }
+
+const login = (e) => {
+  e.preventDefault();
+  registerForm.style.transform = "translateX(20rem)";
+  loginForm.style.transform = "translateX(20rem)";
+  indicator.style.transform = "translateX(0rem)";
+};
+
+const register = (e) => {
+  e.preventDefault();
+  registerForm.style.transform = "translateX(0rem)";
+  loginForm.style.transform = "translateX(0rem)";
+  indicator.style.transform = "translateX(6.25rem)";
+};
+
+registerLink.addEventListener("click", register);
+loginLink.addEventListener("click", login);
