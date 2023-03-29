@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Redstone Online Grocery</title>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!------------------------- Header ------------------------------->
+    <div class="header">
+      <div class="container">
+        <div class="navbar">
+          <div class="logo">
+            <img src="./images/logo.png" alt="" srcset="" />
+          </div>
+          <nav>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="accounts.html">Account</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <!------------------------- Accounts ------------------------------->
+    <div class="account-page">
+      <div class="container">
+        <div class="row">
+          <div class="col-2">
+            <img src="./images/image1.png" alt="" />
+          </div>
+          <div class="col-2">
+            <div class="form-container">
+              <div class="form-btn">
+                <span class="login-link">Login</span>
+                <span class="register-link">Sign Up</span>
+                <hr id="indicator" />
+              </div>
+              <form id="login-form">
+                <input
+                  type="email"
+                  id="login-email"
+                  placeholder="Email Address"
+                />
+                <input
+                  type="password"
+                  id="login-password"
+                  placeholder="Password"
+                />
+                <button type="submit" class="btn" id="signIn">Login</button>
+              </form>
+              <form id="sign-up-form">
+                <input type="email" id="email" placeholder="Email Address" />
+                <input type="password" id="password" placeholder="Password" />
+                <input type="text" id="phone" placeholder="Phone" />
+                <input type="text" id="city" placeholder="City" />
+                <input type="text" id="street" placeholder="Street" />
+                <input
+                  type="text"
+                  id="postal-code"
+                  placeholder="Postal Address"
+                />
+                <input type="text id" id="country" placeholder="Country" />
+                <button type="submit" class="btn" id="signUp">Sign Up</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
