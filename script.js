@@ -1,14 +1,3 @@
-// const logregBox = document.querySelector(".logreg-box");
-// const loginLink = document.querySelector(".login-link");
-// const registerLink = document.querySelector(".register-link");
-
-// registerLink.addEventListener("click", () => {
-//   logregBox.classList.add("active");
-// });
-// loginLink.addEventListener("click", () => {
-//   logregBox.classList.remove("active");
-// });
-
 const customerSignUp = async (e) => {
   e.preventDefault();
   var url = "http://localhost:8000/customers/signup";
@@ -88,6 +77,7 @@ const customerSignIn = async (e) => {
     return error;
   }
 };
+
 document.getElementById("signUp").addEventListener("click", customerSignUp);
 document.getElementById("signIn").addEventListener("click", customerSignIn);
 
@@ -96,20 +86,8 @@ const loginForm = document.getElementById("login-form");
 const registerForm = document.getElementById("sign-up-form");
 const indicator = document.getElementById("indicator");
 
-const registerLink = document.querySelector(".register-link");
-const loginLink = document.querySelector(".login-link");
-
-// console.log("OK");
-
-// function login() {
-//   registerForm.style.transform = "translateX(20rem)";
-//   loginForm.style.transform = "translateX(20rem)";
-// }
-
-// function regsiter() {
-//   registerForm.style.transform = "translateX(0rem)";
-//   loginForm.style.transform = "translateX(0rem)";
-// }
+const registerLink = document.getElementById("register-link");
+const loginLink = document.getElementById("login-link");
 
 const login = (e) => {
   e.preventDefault();
